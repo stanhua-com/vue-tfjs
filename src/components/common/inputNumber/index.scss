@@ -1,0 +1,41 @@
+.input-number {
+  position: relative;
+
+  .icon {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    width: 38 * $size;
+    height: 38 * $size;
+    font-size: 15 * $size;
+    cursor: pointer;
+    background-color: $bg-color;
+    border: 1 * $size solid $border-color;
+    border-radius: 2* $size 0 0 2* $size;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .i-minus {
+    left: 0;
+  }
+
+  .i-plus {
+    right: 0;
+  }
+
+  .input {
+    padding-left: 48 * $size;
+    padding-right: 48 * $size;
+    text-align: center;
+  }
+}
+
+.disabled-input-number {
+  .icon {
+    color: $gray-color;
+    background-color: $disable-color;
+    cursor: not-allowed;
+  }
+}

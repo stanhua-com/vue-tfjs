@@ -1,0 +1,53 @@
+.input-box {
+  position: relative;
+
+  .append,
+  .prepend {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    width: $size * 30;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .prepend {
+    left: 0;
+  }
+
+  .append {
+    right: 0;
+  }
+
+  .i-clear {
+    line-height: $size * 20;
+    font-size: $size * 20;
+    color: $disable-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $red-color;
+    }
+  }
+}
+
+.input-prepend {
+  .input {
+    padding-left: $size * 30;
+  }
+}
+
+.input-append {
+  .input {
+    padding-right: $size * 30;
+  }
+}
+
+.input-prepend-append {
+  .input {
+    padding-left: $size * 30;
+    padding-right: $size * 30;
+  }
+}

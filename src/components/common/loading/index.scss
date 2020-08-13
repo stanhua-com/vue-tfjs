@@ -1,0 +1,17 @@
+.loading {
+  display: flex;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: '';
+    width: $size *16;
+    height: $size *16;
+    border-width: $size *2;
+    border-style: solid;
+    border-color: transparent rgba($base-color, 1) rgba($base-color, 1) transparent;
+    border-radius: 50%;
+    animation: rotating .7s linear infinite;
+  }
+}

@@ -1,0 +1,83 @@
+.slider {
+  position: relative;
+  display: flex;
+  height: 8 * $size;
+  cursor: pointer;
+  background-color: $border-color;
+  border-radius: 10 * $size;
+  align-items: center;
+  justify-content: flex-start;
+
+  .slider-bar {
+    position: absolute;
+    height: 100%;
+    background-color: $base-color;
+    border-radius: 10 * $size;
+  }
+
+  .slider-handle {
+    position: absolute;
+    top: -7 * $size;
+    z-index: 1;
+    width: 22 * $size;
+    height: 22 * $size;
+    background-color: $white-color;
+    border-radius: 20 * $size;
+    box-shadow: 0 1 * $size 8 * $size rgba($black-color, 0.18);
+    transform: translate3d(-11 * $size, 0, 0);
+
+    span {
+      position: absolute;
+      top: -28 * $size;
+      right: -3 * $size;
+      z-index: 10;
+      display: none;
+      width: 28 * $size;
+      padding: 5 * $size 0;
+      line-height: 12 * $size;
+      font-size: 12 * $size;
+      color: $white-color;
+      text-align: center;
+      background-color: rgba($black-color, 0.8);
+      border-radius: 3 * $size;
+      filter: drop-shadow(0 0 10 * $size rgba($base-color, 0.18));
+
+      &::after {
+        position: absolute;
+        top: 20 * $size;
+        right: 7 * $size;
+        z-index: 10;
+        @include triangle(bottom, 6 * $size, rgba($black-color, 0.8));
+      }
+    }
+
+    &:hover {
+      box-shadow: 0 0 20 * $size rgba($black-color, 0.68);
+
+      span {
+        display: block;
+      }
+    }
+  }
+}
+
+.vertical-slider {
+  width: 8 * $size;
+  height: 100%;
+
+  .slider-bar {
+    bottom: 0;
+    width: 100%;
+  }
+
+  .slider-handle {
+    top: auto;
+    left: -7 * $size;
+    transform: translate3d(0, 11 * $size, 0);
+  }
+}
+
+.slider-disabled {
+  cursor: not-allowed;
+  opacity: 0.68;
+}

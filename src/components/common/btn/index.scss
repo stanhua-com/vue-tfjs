@@ -1,0 +1,86 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  padding: 8 * $size 30 * $size;
+  line-height: 18 * $size;
+  font-weight: 400;
+  font-size: 14 * $size;
+  color: $font-color;
+  text-decoration: none;
+  vertical-align: middle;
+  outline: none;
+  cursor: pointer;
+  background-color: $white-color;
+  border: 1 * $size solid $border-color;
+  border-radius: 20 * $size;
+  transition: background-color 180ms ease, border-color 280ms ease-in;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.68;
+  }
+
+  &.is-plain {
+
+    &:hover {
+      color: $base-color;
+      opacity: 1;
+      border-color: $base-color;
+    }
+  }
+}
+
+.btn-primary {
+  color: $white-color;
+  background-color: $base-color;
+  border-color: $base-color;
+
+  &.is-plain {
+    color: $base-color;
+    background-color: rgba($base-color, 0.18);
+
+    &:hover {
+      color: $white-color;
+      background-color: $base-color;
+    }
+  }
+}
+
+.btn-success {
+  color: $white-color;
+  background-color: $success-color;
+  border-color: $success-color;
+
+  &.is-plain {
+    color: $success-color;
+    background-color: rgba($success-color, 0.18);
+
+    &:hover {
+      color: $white-color;
+      background-color: $success-color;
+      border-color: $success-color;
+    }
+  }
+}
+
+.btn-warning {
+  color: $white-color;
+  background-color: $warning-color;
+  border-color: $warning-color;
+
+  &.is-plain {
+    color: $warning-color;
+    background-color: rgba($warning-color, 0.18);
+
+    &:hover {
+      color: $white-color;
+      background-color: $warning-color;
+      border-color: $warning-color;
+    }
+  }
+}
+
+.is-disabled {
+  opacity: 0.58;
+  cursor: not-allowed;
+}

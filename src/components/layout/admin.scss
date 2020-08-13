@@ -1,0 +1,125 @@
+.layout-content {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+
+  .layout-nav {
+    position: relative;
+    display: flex;
+    width: $size * 66;
+    overflow: hidden;
+    background-color: $base-color;
+    flex-direction: column;
+
+    .nav-item {
+      color: $white-color;
+    }
+  }
+
+  .nav-logo {
+    padding: $size*15 0;
+    text-align: center;
+    cursor: pointer;
+
+    img {
+      height: $size*28;
+    }
+  }
+
+  .nav-content {
+    width: 110%;
+    height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex: 1;
+
+    .nav-active {
+      color: $white-color;
+      background-color: $base-active-color;
+    }
+  }
+
+  .nav-view {
+    line-height: $size*16;
+  }
+
+  .nav-item {
+    position: relative;
+    display: block;
+    padding: $size*15 $size*10 $size*15 $size*18;
+
+    .icon {
+      line-height: $size*28;
+      font-size: $size*28;
+      color: rgba($white-color,0.8);
+      cursor: pointer;
+    }
+
+    span {
+      position: absolute;
+      bottom: -10%;
+      left: 0;
+      z-index: 100;
+      display: none;
+      padding: $size*8 $size*10;
+      line-height: $size*16;
+      background-color: rgba($black-color, 0.68);
+      border-radius: $size*3;
+    }
+
+    &:hover {
+      .icon {
+        color: $white-color;
+      }
+
+      span {
+        display: block;
+        animation: fadeRin .35s ease;
+      }
+    }
+
+  }
+
+  .layout-grid {
+    width: 0;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    flex: 1;
+  }
+}
+
+.content {
+  width: 0;
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.layout-grid {
+  display: flex;
+
+  .grid-nav {
+    width: $size*200;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: $white-color;
+    border-right: $size*1 solid $border-color;
+  }
+
+  .nav-item {
+    &.nav-active,
+    &:hover {
+      color: $white-color;
+      background-color: $base-active-color;
+    }
+  }
+
+  .content {
+    padding: $size*10;
+  }
+}

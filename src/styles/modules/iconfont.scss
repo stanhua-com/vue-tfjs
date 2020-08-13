@@ -1,0 +1,56 @@
+// styles/modules/iconfont.scss
+
+@font-face {
+  font-family: "iconfont";
+  src: url("../assets/fonts/iconfont.woff?t=1597310896853") format("woff"),
+    url("../assets/fonts/iconfont.ttf?t=1597310896853") format("truetype");
+}
+
+.icon {
+  font-family: "iconfont" !important;
+  font-size: 16 * $size;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.i-arrow-right:before {
+  content: "\e79e";
+}
+
+.i-arrow-left:before {
+  content: "\e79f";
+}
+
+.i-arrow-up:before {
+  content: "\e7a0";
+}
+
+.i-arrow-down:before {
+  content: "\e7b2";
+}
+
+.i-application:before {
+  content: "\e609";
+}
+
+.i-example:before {
+  content: "\e600";
+}
+
+.i-plus:before {
+  content: "\e646";
+}
+
+.i-minus:before {
+  content: "\e768";
+}
+
+.i-copy:before {
+  content: "\ea43";
+}
+
+.i-close:before {
+  content: "\e8b5";
+}
