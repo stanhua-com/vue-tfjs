@@ -10,6 +10,13 @@ export default {
   sort: 1,
   children: [
     {
+      path: 'tensor',
+      meta: {
+        title: '张量 Tensor'
+      },
+      component: () => import('@/views/example/tensor/index.vue')
+    },
+    {
       path: 'scalar',
       meta: {
         title: '标量 Scalar'

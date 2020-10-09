@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <transition :name="transitionName">
-      <router-view />
-    </transition>
+    <!-- <transition :name="transitionName"> -->
+    <router-view />
+    <!-- </transition> -->
   </div>
 </template>
 
@@ -16,17 +16,17 @@
     name: 'App',
     data() {
       return {
-        transitionName: 'slide-left'
+        // transitionName: 'slide-left'
       }
     },
     created() {
     },
-    watch: {
-      '$route'(to, from) {
-        const toDepth = to.path.split('/').length
-        const fromDepth = from.path.split('/').length
-        this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
-      }
-    }
+    // watch: {
+    //   '$route'(to, from) {
+    //     const toDepth = to.path.split('/').length
+    //     const fromDepth = from.path.split('/').length
+    //     this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    //   }
+    // }
   }
 </script>

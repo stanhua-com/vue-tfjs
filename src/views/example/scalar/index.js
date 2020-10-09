@@ -31,9 +31,15 @@ export default {
     })
     const scalar = tf.scalar(5)
     scalar.print()
+
+    this.linearRegressionModel()
+
   },
   methods: {
     onChange() {
     },
+
+    linearRegressionModel() {
+    }
   }
 }

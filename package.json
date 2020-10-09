@@ -20,7 +20,7 @@
     "secure-ls": "^1.2.6",
     "clipboard": "^2.0.6",
     "monaco-editor": "^0.20.0",
-    "@tensorflow/tfjs": "^2.1.0"
+    "@tensorflow/tfjs": "^2.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0",
