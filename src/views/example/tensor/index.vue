@@ -41,6 +41,7 @@
             <td>数据类型。</td>
           </tr>
         </table>
+        <h3>返回值:tf.Tensor</h3>
 
         <div class="section-code" v-for="(item, i) in list" :key="i">
           <p>{{ item.desc }}</p>
